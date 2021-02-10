@@ -17,11 +17,7 @@ const connect = function () {
     console.log("Successfully connected to game server");
     conn.write("Name: NMA");
   });
-  // conn.setTimeout(500);
-  // conn.on("timeout", () => {
-  //   conn.write("Move: up");
-  // });
   return conn;
 };
 
-module.exports = connect;
+module.exports = { connect };
