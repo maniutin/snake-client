@@ -15,8 +15,12 @@ const connect = function () {
   });
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    conn.write("Name: NMA`");
+    conn.write("Name: NMA");
   });
+  // conn.setTimeout(500);
+  // conn.on("timeout", () => {
+  //   conn.write("Move: up");
+  // });
   return conn;
 };
 
