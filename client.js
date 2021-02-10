@@ -13,6 +13,10 @@ const connect = function () {
   conn.on("end", () => {
     console.log("disconnected from server");
   });
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+    conn.write("Name: NMA`");
+  });
   return conn;
 };
 
