@@ -16,7 +16,6 @@ const handleUserInput = function (key) {
   if (key === "\u0003") {
     process.exit();
   }
-
   if (key === "w") {
     connection.write("Move: up");
   }
@@ -28,6 +27,9 @@ const handleUserInput = function (key) {
   }
   if (key === "d") {
     connection.write("Move: right");
+  }
+  if (key === "x") {
+    connection.write("Say: HUNGRY");
   }
 };
 
